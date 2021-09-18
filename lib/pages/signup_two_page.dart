@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:marvie/pages/signup_two_page.dart';
 
 import '../theme.dart';
 
-class SignupOnePage extends StatelessWidget {
+class SignupTwoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,13 +50,13 @@ class SignupOnePage extends StatelessWidget {
                   height: 48,
                   width: 38,
                   decoration: BoxDecoration(
-                    color: yellowColor.withOpacity(0.3),
+                    color: redColor.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Center(
                     child: Icon(
-                      Icons.person,
-                      color: yellowColor,
+                      Icons.lock,
+                      color: redColor,
                     ),
                   ),
                 ),
@@ -65,11 +64,16 @@ class SignupOnePage extends StatelessWidget {
                   width: 18,
                 ),
                 Text(
-                  'Your fullname',
+                  'Create password',
                   style: regularTextStyle.copyWith(
                     fontSize: 18,
                     color: greyColor,
                   ),
+                ),
+                Spacer(),
+                Icon(
+                  Icons.visibility_off,
+                  color: greyColor,
                 ),
               ],
             ),
@@ -82,13 +86,13 @@ class SignupOnePage extends StatelessWidget {
                   height: 48,
                   width: 38,
                   decoration: BoxDecoration(
-                    color: yellowColor.withOpacity(0.3),
+                    color: redColor.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Center(
                     child: Icon(
-                      Icons.person,
-                      color: yellowColor,
+                      Icons.lock,
+                      color: redColor,
                     ),
                   ),
                 ),
@@ -96,11 +100,16 @@ class SignupOnePage extends StatelessWidget {
                   width: 18,
                 ),
                 Text(
-                  'Username',
+                  'Repeat your password',
                   style: regularTextStyle.copyWith(
                     fontSize: 18,
                     color: greyColor,
                   ),
+                ),
+                Spacer(),
+                Icon(
+                  Icons.visibility_off,
+                  color: greyColor,
                 ),
               ],
             ),
@@ -138,9 +147,7 @@ class SignupOnePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) {
-                              return SignupTwoPage();
-                            },
+                            builder: (context) {},
                           ),
                         );
                       },
