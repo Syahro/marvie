@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marvie/pages/signup_one_page.dart';
 import 'package:marvie/theme.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -210,7 +211,16 @@ class WelcomePage extends StatelessWidget {
               height: 50,
               width: double.infinity,
               child: FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return SignupOnePage();
+                      },
+                    ),
+                  );
+                },
                 color: greenColor.withOpacity(0.3),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
