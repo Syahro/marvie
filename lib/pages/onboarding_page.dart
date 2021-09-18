@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marvie/pages/welcome_page.dart';
 import 'package:marvie/theme.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -115,7 +116,16 @@ class OnboardingPage extends StatelessWidget {
                     height: 50,
                     padding: EdgeInsets.only(left: 10),
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return WelcomePage();
+                            },
+                          ),
+                        );
+                      },
                       color: greenColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
