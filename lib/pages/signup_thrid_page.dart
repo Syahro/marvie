@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:marvie/pages/signup_thrid_page.dart';
 
 import '../theme.dart';
 
-class SignupTwoPage extends StatelessWidget {
+class SignupThirdPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +25,7 @@ class SignupTwoPage extends StatelessWidget {
               height: 28,
             ),
             Text(
-              'Hello!',
+              'Sign up',
               style: boldTextStyle.copyWith(
                 fontSize: 42,
                 color: whiteColor,
@@ -36,7 +35,7 @@ class SignupTwoPage extends StatelessWidget {
               height: 9,
             ),
             Text(
-              'lets introduce',
+              'to start working',
               style: regularTextStyle.copyWith(
                 fontSize: 24,
                 color: greyColor,
@@ -49,73 +48,53 @@ class SignupTwoPage extends StatelessWidget {
               children: [
                 Container(
                   height: 48,
-                  width: 38,
+                  width: 118,
                   decoration: BoxDecoration(
-                    color: redColor.withOpacity(0.3),
-                    borderRadius: BorderRadius.circular(8),
+                    color: greenColor.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(12),
                   ),
-                  child: Center(
-                    child: Icon(
-                      Icons.lock,
-                      color: redColor,
-                    ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/flag.png',
+                        width: 20,
+                        height: 16,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        '+31',
+                        style: regularTextStyle.copyWith(
+                          fontSize: 18,
+                          color: greenColor,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.expand_more,
+                        color: greenColor,
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(
-                  width: 18,
+                  width: 20,
                 ),
                 Text(
-                  'Create password',
+                  '20  666  13  13',
                   style: regularTextStyle.copyWith(
                     fontSize: 18,
                     color: greyColor,
                   ),
                 ),
-                Spacer(),
-                Icon(
-                  Icons.visibility_off,
-                  color: greyColor,
-                ),
               ],
             ),
             SizedBox(
-              height: 30,
-            ),
-            Row(
-              children: [
-                Container(
-                  height: 48,
-                  width: 38,
-                  decoration: BoxDecoration(
-                    color: redColor.withOpacity(0.3),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Center(
-                    child: Icon(
-                      Icons.lock,
-                      color: redColor,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 18,
-                ),
-                Text(
-                  'Repeat your password',
-                  style: regularTextStyle.copyWith(
-                    fontSize: 18,
-                    color: greyColor,
-                  ),
-                ),
-                Spacer(),
-                Icon(
-                  Icons.visibility_off,
-                  color: greyColor,
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 40,
+              height: 70,
             ),
             Row(
               children: [
@@ -148,9 +127,7 @@ class SignupTwoPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) {
-                              return SignupThirdPage();
-                            },
+                            builder: (context) {},
                           ),
                         );
                       },
