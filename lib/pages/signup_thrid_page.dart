@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marvie/widget/otp_copied.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 import '../theme.dart';
@@ -152,11 +153,185 @@ class SignupThirdPage extends StatelessWidget {
                                     children: [
                                       Column(
                                         children: [
-                                          Text(
-                                            'PASTE FROM SMS',
-                                            style: regularTextStyle.copyWith(
-                                              fontSize: 12,
-                                              color: greenColor,
+                                          InkWell(
+                                            onTap: () {
+                                              return showMaterialModalBottomSheet(
+                                                context: context,
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.vertical(
+                                                    top: Radius.circular(24),
+                                                  ),
+                                                ),
+                                                builder: (context) =>
+                                                    SingleChildScrollView(
+                                                  controller:
+                                                      ModalScrollController.of(
+                                                          context),
+                                                  child: Container(
+                                                    height: 263,
+                                                    decoration: BoxDecoration(
+                                                      borderRadius:
+                                                          BorderRadius.vertical(
+                                                        top:
+                                                            Radius.circular(24),
+                                                      ),
+                                                      color: darkGreenColor,
+                                                    ),
+                                                    child: Column(
+                                                      children: [
+                                                        SizedBox(
+                                                          height: 16,
+                                                        ),
+                                                        Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Column(
+                                                              children: [
+                                                                Text(
+                                                                  'PASTE FROM SMS',
+                                                                  style: regularTextStyle
+                                                                      .copyWith(
+                                                                    fontSize:
+                                                                        12,
+                                                                    color:
+                                                                        greenColor,
+                                                                  ),
+                                                                ),
+                                                                Text(
+                                                                  '0349',
+                                                                  style: boldTextStyle
+                                                                      .copyWith(
+                                                                    fontSize:
+                                                                        16,
+                                                                    color:
+                                                                        greenColor,
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ],
+                                                        ),
+                                                        SizedBox(
+                                                          height: 12,
+                                                        ),
+                                                        Container(
+                                                          height: 199,
+                                                          width:
+                                                              double.infinity,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color:
+                                                                semiDarkColor,
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .vertical(
+                                                              top: Radius
+                                                                  .circular(24),
+                                                            ),
+                                                          ),
+                                                          child: Padding(
+                                                            padding: EdgeInsets
+                                                                .fromLTRB(30,
+                                                                    40, 30, 0),
+                                                            child: Column(
+                                                              children: [
+                                                                Row(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .spaceBetween,
+                                                                  children: [
+                                                                    OtpCopied(
+                                                                        0),
+                                                                    OtpCopied(
+                                                                        3),
+                                                                    OtpCopied(
+                                                                        4),
+                                                                    OtpCopied(
+                                                                        9),
+                                                                  ],
+                                                                ),
+                                                                SizedBox(
+                                                                  height: 23,
+                                                                ),
+                                                                Text(
+                                                                  'Please, enter 4-digit code we sent on your number as SMS',
+                                                                  style: regularTextStyle
+                                                                      .copyWith(
+                                                                    fontSize:
+                                                                        16,
+                                                                    color:
+                                                                        greyColor,
+                                                                  ),
+                                                                ),
+                                                                SizedBox(
+                                                                  height: 10,
+                                                                ),
+                                                                Container(
+                                                                  height: 50,
+                                                                  width: double
+                                                                      .infinity,
+                                                                  child:
+                                                                      FlatButton(
+                                                                    onPressed:
+                                                                        () {},
+                                                                    color:
+                                                                        greenColor,
+                                                                    shape:
+                                                                        RoundedRectangleBorder(
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              12),
+                                                                    ),
+                                                                    child: Row(
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .center,
+                                                                      children: [
+                                                                        Text(
+                                                                          'Next',
+                                                                          style:
+                                                                              boldTextStyle.copyWith(
+                                                                            fontSize:
+                                                                                16,
+                                                                            color:
+                                                                                whiteColor,
+                                                                          ),
+                                                                        ),
+                                                                        SizedBox(
+                                                                          width:
+                                                                              5,
+                                                                        ),
+                                                                        Icon(
+                                                                          Icons
+                                                                              .east,
+                                                                          color:
+                                                                              whiteColor,
+                                                                          size:
+                                                                              17,
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                )
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              );
+                                            },
+                                            child: Text(
+                                              'PASTE FROM SMS',
+                                              style: regularTextStyle.copyWith(
+                                                fontSize: 12,
+                                                color: greenColor,
+                                              ),
                                             ),
                                           ),
                                           Text(
