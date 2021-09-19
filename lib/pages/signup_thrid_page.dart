@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marvie/pages/signup_face_page.dart';
 import 'package:marvie/widget/otp_copied.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
@@ -276,7 +277,18 @@ class SignupThirdPage extends StatelessWidget {
                                                                   child:
                                                                       FlatButton(
                                                                     onPressed:
-                                                                        () {},
+                                                                        () {
+                                                                      Navigator
+                                                                          .push(
+                                                                        context,
+                                                                        MaterialPageRoute(
+                                                                          builder:
+                                                                              (context) {
+                                                                            return SignupFacePage();
+                                                                          },
+                                                                        ),
+                                                                      );
+                                                                    },
                                                                     color:
                                                                         greenColor,
                                                                     shape:
