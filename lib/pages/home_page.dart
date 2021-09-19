@@ -1,11 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:marvie/theme.dart';
+import 'package:marvie/widget/bottom_floating.dart';
 
 class HomePage extends StatelessWidget {
+  final bool isFav;
+  final bool isHome;
+  final bool isChat;
+  final bool isNotif;
+
+  HomePage({
+    this.isFav,
+    this.isHome,
+    this.isChat,
+    this.isNotif,
+  });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: linearBackgroundOne,
+      floatingActionButton: BottomFloating(
+        isFav: isFav,
+        isHome: isHome,
+        isChat: isChat,
+        isNotif: isNotif,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 28),
@@ -239,7 +258,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 50,
+              height: 120,
             ),
           ],
         ),

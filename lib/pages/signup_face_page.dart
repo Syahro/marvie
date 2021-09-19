@@ -105,7 +105,12 @@ class SignupFacePage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return HomePage();
+                              return HomePage(
+                                isFav: false,
+                                isHome: true,
+                                isChat: false,
+                                isNotif: false,
+                              );
                             },
                           ),
                         );
