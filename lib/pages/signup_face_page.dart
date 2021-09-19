@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marvie/pages/home_page.dart';
 
 import '../theme.dart';
 
@@ -104,7 +105,7 @@ class SignupFacePage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              // return SignupThirdPage();
+                              return HomePage();
                             },
                           ),
                         );
