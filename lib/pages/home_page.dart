@@ -570,6 +570,243 @@ class HomePage extends StatelessWidget {
               ),
             ),
             SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: 28),
+              child: Column(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 24,
+                      vertical: 32,
+                    ),
+                    decoration: BoxDecoration(
+                      color: semiLightGreenColor,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          height: 156,
+                          child: Stack(
+                            children: [
+                              Image.asset(
+                                'assets/video.png',
+                                width: double.infinity,
+                                fit: BoxFit.cover,
+                              ),
+                              Center(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 50,
+                                      height: 50,
+                                      decoration: BoxDecoration(
+                                        color: whiteColor,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Center(
+                                        child: Image.asset(
+                                          'assets/spone.png',
+                                          width: 14,
+                                          height: 16,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(16),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Container(
+                                          height: 28,
+                                          width: 28,
+                                          decoration: BoxDecoration(
+                                            color: whiteColor,
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Center(
+                                            child: Image.asset(
+                                              'assets/resize.png',
+                                              width: 16,
+                                              height: 32,
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 26,
+                        ),
+                        Text(
+                          'Burger King',
+                          style: boldTextStyle.copyWith(
+                            fontSize: 16,
+                            color: whiteColor,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.star,
+                              color: whiteColor,
+                              size: 18,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              '4.9',
+                              style: regularTextStyle.copyWith(
+                                fontSize: 16,
+                                color: whiteColor,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 7,
+                            ),
+                            Container(
+                              height: 3,
+                              width: 3,
+                              decoration: BoxDecoration(
+                                color: whiteColor,
+                                borderRadius: BorderRadius.circular(2),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 8,
+                            ),
+                            Text(
+                              'American kitchen',
+                              style: regularTextStyle.copyWith(
+                                fontSize: 16,
+                                color: whiteColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              height: 27,
+                              width: 111,
+                              decoration: BoxDecoration(
+                                color: whiteColor,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '25 - 30 min',
+                                  style: boldTextStyle.copyWith(
+                                    fontSize: 12,
+                                    color: semiLightGreenColor,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 11,
+                            ),
+                            Text(
+                              '2.1 km',
+                              style: boldTextStyle.copyWith(
+                                fontSize: 12,
+                                color: whiteColor,
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.fromLTRB(24, 32, 16, 32),
+                    decoration: BoxDecoration(
+                      color: semiDarkColor,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 77,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            color: whiteColor,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/booked_pm.png',
+                              width: 63,
+                              height: 36,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 18,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Booked for 8 PM ',
+                              style: boldTextStyle.copyWith(
+                                fontSize: 14,
+                                color: whiteColor,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 6,
+                            ),
+                            Text(
+                              'This is an event manager that\nwill help you choose the most\ninteresting exhibition.',
+                              style: regularTextStyle.copyWith(
+                                fontSize: 12,
+                                color: whiteColor.withOpacity(0.5),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Spacer(),
+                        Icon(
+                          Icons.more_vert,
+                          color: whiteColor.withOpacity(0.4),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
               height: 120,
             ),
           ],
