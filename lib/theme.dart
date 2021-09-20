@@ -5,6 +5,7 @@ Color linearBackgroundTwo = Color(0XFF1F2E35);
 Color redColor = Color(0XFFFF464F);
 Color orangeColor = Color(0XFFFF8A34);
 Color yellowColor = Color(0XFFFFBC25);
+Color darkYellowColor = Color(0XFFFFC542);
 Color greenColor = Color(0XFF25C685);
 Color semiLightGreenColor = Color(0XFF3DD598);
 Color darkGreenColor = Color(0XFF286053);
