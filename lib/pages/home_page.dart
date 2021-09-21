@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marvie/pages/statistic_page.dart';
 import 'package:marvie/theme.dart';
 import 'package:marvie/widget/bottom_floating.dart';
 import 'package:marvie/widget/card_feed_two.dart';
@@ -48,87 +49,99 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     height: 19,
                   ),
-                  Container(
-                    width: double.infinity,
-                    padding: EdgeInsets.all(23),
-                    decoration: BoxDecoration(
-                      color: semiLightGreenColor,
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  height: 45,
-                                  width: 45,
-                                  decoration: BoxDecoration(
-                                    color: whiteColor.withOpacity(0.2),
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                  child: Center(
-                                    child: Image.asset(
-                                      'assets/star.png',
-                                      width: 15,
-                                      height: 15,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return StatisticPage();
+                          },
+                        ),
+                      );
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.all(23),
+                      decoration: BoxDecoration(
+                        color: semiLightGreenColor,
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 45,
+                                    width: 45,
+                                    decoration: BoxDecoration(
+                                      color: whiteColor.withOpacity(0.2),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Center(
+                                      child: Image.asset(
+                                        'assets/star.png',
+                                        width: 15,
+                                        height: 15,
+                                      ),
                                     ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: 19,
-                                ),
-                                Text(
-                                  'Weekly\nProgress',
-                                  style: boldTextStyle.copyWith(
-                                    fontSize: 16,
-                                    color: whiteColor,
+                                  SizedBox(
+                                    width: 19,
                                   ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Text(
-                              'It looks like you are on\ntrack. Please continue to\nfollow your daily plan',
-                              style: regularTextStyle.copyWith(
-                                fontSize: 16,
-                                color: whiteColor,
+                                  Text(
+                                    'Weekly\nProgress',
+                                    style: boldTextStyle.copyWith(
+                                      fontSize: 16,
+                                      color: whiteColor,
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ),
-                          ],
-                        ),
-                        Container(
-                          height: 60,
-                          width: 60,
-                          padding: EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                            color: whiteColor.withOpacity(0.3),
-                            borderRadius: BorderRadius.circular(30),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Text(
+                                'It looks like you are on\ntrack. Please continue to\nfollow your daily plan',
+                                style: regularTextStyle.copyWith(
+                                  fontSize: 16,
+                                  color: whiteColor,
+                                ),
+                              ),
+                            ],
                           ),
-                          child: Container(
-                            width: double.infinity,
-                            height: double.infinity,
+                          Container(
+                            height: 60,
+                            width: 60,
+                            padding: EdgeInsets.all(8),
                             decoration: BoxDecoration(
-                              color: whiteColor,
+                              color: whiteColor.withOpacity(0.3),
                               borderRadius: BorderRadius.circular(30),
                             ),
-                            child: Center(
-                              child: Text(
-                                'ok',
-                                style: semiBoldTextStyle.copyWith(
-                                  fontSize: 14,
-                                  color: greenColor,
+                            child: Container(
+                              width: double.infinity,
+                              height: double.infinity,
+                              decoration: BoxDecoration(
+                                color: whiteColor,
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'ok',
+                                  style: semiBoldTextStyle.copyWith(
+                                    fontSize: 14,
+                                    color: greenColor,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(

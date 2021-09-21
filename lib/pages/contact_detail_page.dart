@@ -10,8 +10,8 @@ class ContactDetailPage extends StatelessWidget {
       backgroundColor: linearBackgroundOne,
       floatingActionButton: BottomFloating(
         isFav: false,
-        isHome: true,
-        isChat: false,
+        isHome: false,
+        isChat: true,
         isNotif: false,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
