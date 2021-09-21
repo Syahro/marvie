@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marvie/pages/contact_detail_page.dart';
 
 import '../theme.dart';
 
@@ -31,18 +32,30 @@ class HistoryChat extends StatelessWidget {
       children: [
         Row(
           children: [
-            Container(
-              height: 60,
-              width: 60,
-              decoration: BoxDecoration(
-                color: colorAvatar,
-                borderRadius: BorderRadius.circular(30),
-              ),
-              child: Center(
-                child: Image.asset(
-                  'assets/$imageUrl',
-                  width: 22,
-                  height: 22,
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return ContactDetailPage();
+                    },
+                  ),
+                );
+              },
+              child: Container(
+                height: 60,
+                width: 60,
+                decoration: BoxDecoration(
+                  color: colorAvatar,
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Center(
+                  child: Image.asset(
+                    'assets/$imageUrl',
+                    width: 22,
+                    height: 22,
+                  ),
                 ),
               ),
             ),
