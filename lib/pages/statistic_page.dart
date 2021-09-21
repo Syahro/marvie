@@ -616,6 +616,95 @@ class StatisticPage extends StatelessWidget {
               ),
             ),
             SizedBox(
+              height: 30,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 28),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Statistics',
+                    style: boldTextStyle.copyWith(
+                      fontSize: 42,
+                      color: whiteColor,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: 241,
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(horizontal: 22, vertical: 25),
+                    decoration: BoxDecoration(
+                      color: semiDarkColor,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Image.asset(
+                      'assets/bar_chart.png',
+                      width: double.infinity,
+                      height: double.infinity,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Container(
+                    height: 276,
+                    width: double.infinity,
+                    padding: EdgeInsets.only(left: 23, top: 25),
+                    decoration: BoxDecoration(
+                      color: semiDarkColor,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Stack(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Statistics',
+                              style: boldTextStyle.copyWith(
+                                fontSize: 18,
+                                color: whiteColor,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 33,
+                            ),
+                            Image.asset(
+                              'assets/line_info.png',
+                              width: double.infinity,
+                              height: 166,
+                            ),
+                          ],
+                        ),
+                        Positioned(
+                          right: 0,
+                          bottom: 0,
+                          child: Image.asset(
+                            'assets/line_chart.png',
+                            width: 255,
+                            height: 250,
+                          ),
+                        ),
+                        Positioned(
+                          top: 88,
+                          left: 65,
+                          child: Image.asset(
+                            'assets/info.png',
+                            width: 62,
+                            height: 29,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
               height: 100,
             ),
           ],
