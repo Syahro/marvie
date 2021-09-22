@@ -3,6 +3,7 @@ import 'package:marvie/pages/statistic_page.dart';
 import 'package:marvie/theme.dart';
 import 'package:marvie/widget/bottom_floating.dart';
 import 'package:marvie/widget/card_feed_two.dart';
+import 'package:marvie/widget/category_galery.dart';
 
 class HomePage extends StatelessWidget {
   final bool isFav;
@@ -816,6 +817,267 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 32,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  CategoryGalery(
+                    isActive: true,
+                    imageUrl: 'fire.png',
+                    title: 'Hot',
+                  ),
+                  SizedBox(
+                    width: 19,
+                  ),
+                  CategoryGalery(
+                    isActive: false,
+                    imageUrl: 'dress.png',
+                    title: 'Women',
+                  ),
+                  SizedBox(
+                    width: 19,
+                  ),
+                  CategoryGalery(
+                    isActive: false,
+                    imageUrl: 'dress1.png',
+                    title: 'Man',
+                  ),
+                  SizedBox(
+                    width: 19,
+                  ),
+                  CategoryGalery(
+                    isActive: false,
+                    imageUrl: 'underware.png',
+                    title: 'Undies',
+                  ),
+                  SizedBox(
+                    width: 28,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              width: double.infinity,
+              height: 210,
+              margin: EdgeInsets.only(right: 28),
+              padding: EdgeInsets.only(left: 18),
+              decoration: BoxDecoration(
+                color: cardColor,
+                borderRadius: BorderRadius.circular(25),
+              ),
+              child: Stack(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Image.asset(
+                        'assets/suit1.png',
+                        width: 131,
+                      ),
+                      SizedBox(width: 39),
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Belt suit blazer',
+                        style: regularTextStyle.copyWith(
+                          fontSize: 18,
+                          color: greyColor,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        '\$120',
+                        style: boldTextStyle.copyWith(
+                          fontSize: 22,
+                          color: darkColor,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 39,
+                      ),
+                      Container(
+                        height: 36,
+                        width: 36,
+                        decoration: BoxDecoration(
+                          color: whiteColor,
+                          borderRadius: BorderRadius.circular(18),
+                        ),
+                        child: Center(
+                          child: Icon(
+                            Icons.favorite,
+                            color: redColor,
+                            size: 18,
+                          ),
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 19,
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: 28),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: ((MediaQuery.of(context).size.width - (2 * 28)) /
+                                2) -
+                            9.5,
+                        height: 210,
+                        decoration: BoxDecoration(
+                          color: cardColor,
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              right: 0,
+                              top: 12,
+                              child: Image.asset(
+                                'assets/suit2.png',
+                                width: 103,
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 8, bottom: 17),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Container(
+                                    height: 36,
+                                    width: 36,
+                                    decoration: BoxDecoration(
+                                      color: whiteColor,
+                                      borderRadius: BorderRadius.circular(18),
+                                    ),
+                                    child: Center(
+                                      child: Icon(
+                                        Icons.favorite,
+                                        color: redColor,
+                                        size: 18,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Text(
+                        'Belt suit blazer',
+                        style: regularTextStyle.copyWith(
+                          fontSize: 14,
+                          color: greyColor,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 6,
+                      ),
+                      Text(
+                        '\$120',
+                        style: boldTextStyle.copyWith(
+                          fontSize: 14,
+                          color: whiteColor,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: ((MediaQuery.of(context).size.width - (2 * 28)) /
+                                2) -
+                            9.5,
+                        height: 210,
+                        decoration: BoxDecoration(
+                          color: cardColor,
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              right: 0,
+                              top: 12,
+                              child: Image.asset(
+                                'assets/suit3.png',
+                                width: 103,
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 8, bottom: 17),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Container(
+                                    height: 36,
+                                    width: 36,
+                                    decoration: BoxDecoration(
+                                      color: whiteColor,
+                                      borderRadius: BorderRadius.circular(18),
+                                    ),
+                                    child: Center(
+                                      child: Icon(
+                                        Icons.favorite,
+                                        color: redColor,
+                                        size: 18,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Text(
+                        'Belt suit blazer',
+                        style: regularTextStyle.copyWith(
+                          fontSize: 14,
+                          color: greyColor,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 6,
+                      ),
+                      Text(
+                        '\$120',
+                        style: boldTextStyle.copyWith(
+                          fontSize: 14,
+                          color: whiteColor,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
