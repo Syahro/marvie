@@ -700,6 +700,232 @@ class StatisticPage extends StatelessWidget {
                         ),
                       ],
                     ),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Text(
+                    'Statistics',
+                    style: boldTextStyle.copyWith(
+                      fontSize: 42,
+                      color: whiteColor,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 19,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    height: 256,
+                    padding: EdgeInsets.only(
+                      top: 24,
+                      left: 23,
+                    ),
+                    decoration: BoxDecoration(
+                      color: semiDarkColor,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Stack(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Statistics',
+                              style: boldTextStyle.copyWith(
+                                fontSize: 18,
+                                color: whiteColor,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 14,
+                            ),
+                            Image.asset(
+                              'assets/indikator.png',
+                              width: double.infinity,
+                              height: 166,
+                            ),
+                          ],
+                        ),
+                        Positioned(
+                          bottom: 62,
+                          right: 15,
+                          child: Image.asset(
+                            'assets/candle.png',
+                            width: 234,
+                            height: 115,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 19,
+                  ),
+                  Container(
+                    height: 105,
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 23,
+                      vertical: 24,
+                    ),
+                    decoration: BoxDecoration(
+                      color: semiDarkColor,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 57,
+                          width: 59,
+                          decoration: BoxDecoration(
+                            color: redColor.withOpacity(0.8),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Center(
+                            child: Icon(
+                              Icons.arrow_downward,
+                              color: whiteColor,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              width: 183,
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Weekly progress',
+                                    style: boldTextStyle.copyWith(
+                                      fontSize: 14,
+                                      color: whiteColor,
+                                    ),
+                                  ),
+                                  Text(
+                                    '15%',
+                                    style: boldTextStyle.copyWith(
+                                      fontSize: 14,
+                                      color: redColor,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              width: 183,
+                              height: 10,
+                              decoration: BoxDecoration(
+                                color: darkColor.withOpacity(0.5),
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    width: 64,
+                                    height: 10,
+                                    decoration: BoxDecoration(
+                                      color: redColor.withOpacity(0.8),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Container(
+                    height: 105,
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 23,
+                      vertical: 24,
+                    ),
+                    decoration: BoxDecoration(
+                      color: semiDarkColor,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 57,
+                          width: 59,
+                          decoration: BoxDecoration(
+                            color: yellowColor.withOpacity(0.8),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Center(
+                            child: Icon(
+                              Icons.arrow_upward,
+                              color: whiteColor,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              width: 183,
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Weekly progress',
+                                    style: boldTextStyle.copyWith(
+                                      fontSize: 14,
+                                      color: whiteColor,
+                                    ),
+                                  ),
+                                  Text(
+                                    '15%',
+                                    style: boldTextStyle.copyWith(
+                                      fontSize: 14,
+                                      color: yellowColor,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              width: 183,
+                              height: 10,
+                              decoration: BoxDecoration(
+                                color: darkColor.withOpacity(0.5),
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    width: 136,
+                                    height: 10,
+                                    decoration: BoxDecoration(
+                                      color: yellowColor.withOpacity(0.8),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
