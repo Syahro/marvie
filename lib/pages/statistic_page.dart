@@ -921,9 +921,113 @@ class StatisticPage extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                            )
+                            ),
                           ],
                         )
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Text(
+                    'Statistics',
+                    style: boldTextStyle.copyWith(
+                      fontSize: 42,
+                      color: whiteColor,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 19,
+                  ),
+                  Container(
+                    height: 213,
+                    width: double.infinity,
+                    padding: EdgeInsets.fromLTRB(24, 25, 20, 0),
+                    decoration: BoxDecoration(
+                      color: semiDarkColor,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Statistics',
+                          style: boldTextStyle.copyWith(
+                            fontSize: 18,
+                            color: whiteColor,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 19,
+                        ),
+                        Image.asset(
+                          'assets/chart_line.png',
+                          width: double.infinity,
+                          height: 92,
+                        ),
+                        SizedBox(
+                          height: 13,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              '1',
+                              style: regularTextStyle.copyWith(
+                                fontSize: 12,
+                                color: greyColor,
+                              ),
+                            ),
+                            Text(
+                              '7',
+                              style: regularTextStyle.copyWith(
+                                fontSize: 12,
+                                color: greyColor,
+                              ),
+                            ),
+                            Text(
+                              '14',
+                              style: regularTextStyle.copyWith(
+                                fontSize: 12,
+                                color: greyColor,
+                              ),
+                            ),
+                            Container(),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 19,
+                  ),
+                  Container(
+                    height: 187,
+                    width: double.infinity,
+                    padding: EdgeInsets.fromLTRB(24, 25, 20, 0),
+                    decoration: BoxDecoration(
+                      color: semiDarkColor,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Statistics',
+                          style: boldTextStyle.copyWith(
+                            fontSize: 18,
+                            color: whiteColor,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 19,
+                        ),
+                        Image.asset(
+                          'assets/zigzag_chart.png',
+                          width: double.infinity,
+                          height: 92,
+                        ),
                       ],
                     ),
                   )
