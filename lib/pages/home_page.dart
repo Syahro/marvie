@@ -4,6 +4,8 @@ import 'package:marvie/theme.dart';
 import 'package:marvie/widget/bottom_floating.dart';
 import 'package:marvie/widget/card_feed_two.dart';
 import 'package:marvie/widget/category_galery.dart';
+import 'package:marvie/widget/cateogry_galery.dart';
+import 'package:marvie/widget/galery_card.dart';
 
 class HomePage extends StatelessWidget {
   final bool isFav;
@@ -938,145 +940,91 @@ class HomePage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: ((MediaQuery.of(context).size.width - (2 * 28)) /
-                                2) -
-                            9.5,
-                        height: 210,
-                        decoration: BoxDecoration(
-                          color: cardColor,
-                          borderRadius: BorderRadius.circular(25),
-                        ),
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              right: 0,
-                              top: 12,
-                              child: Image.asset(
-                                'assets/suit2.png',
-                                width: 103,
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 8, bottom: 17),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Container(
-                                    height: 36,
-                                    width: 36,
-                                    decoration: BoxDecoration(
-                                      color: whiteColor,
-                                      borderRadius: BorderRadius.circular(18),
-                                    ),
-                                    child: Center(
-                                      child: Icon(
-                                        Icons.favorite,
-                                        color: redColor,
-                                        size: 18,
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 12,
-                      ),
-                      Text(
-                        'Belt suit blazer',
-                        style: regularTextStyle.copyWith(
-                          fontSize: 14,
-                          color: greyColor,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Text(
-                        '\$120',
-                        style: boldTextStyle.copyWith(
-                          fontSize: 14,
-                          color: whiteColor,
-                        ),
-                      ),
-                    ],
+                  GaleryCard(
+                    imageUrl: 'suit2.png',
+                    title: 'Belt suit blazer',
+                    price: '\$120',
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: ((MediaQuery.of(context).size.width - (2 * 28)) /
-                                2) -
-                            9.5,
-                        height: 210,
-                        decoration: BoxDecoration(
-                          color: cardColor,
-                          borderRadius: BorderRadius.circular(25),
-                        ),
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              right: 0,
-                              top: 12,
-                              child: Image.asset(
-                                'assets/suit3.png',
-                                width: 103,
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 8, bottom: 17),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Container(
-                                    height: 36,
-                                    width: 36,
-                                    decoration: BoxDecoration(
-                                      color: whiteColor,
-                                      borderRadius: BorderRadius.circular(18),
-                                    ),
-                                    child: Center(
-                                      child: Icon(
-                                        Icons.favorite,
-                                        color: redColor,
-                                        size: 18,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 12,
-                      ),
-                      Text(
-                        'Belt suit blazer',
-                        style: regularTextStyle.copyWith(
-                          fontSize: 14,
-                          color: greyColor,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Text(
-                        '\$120',
-                        style: boldTextStyle.copyWith(
-                          fontSize: 14,
-                          color: whiteColor,
-                        ),
-                      ),
-                    ],
+                  GaleryCard(
+                    imageUrl: 'suit3.png',
+                    title: 'Belt suit blazer',
+                    price: '\$120',
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  CateogryGalery(
+                    isActive: true,
+                    imageUrl: '',
+                    title: 'All',
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  CateogryGalery(
+                    isActive: false,
+                    imageUrl: 'party.png',
+                    title: 'Party',
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  CateogryGalery(
+                    isActive: false,
+                    imageUrl: 'camping.png',
+                    title: 'Camping',
+                  ),
+                  SizedBox(
+                    width: 28,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: 28),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  GaleryCard(
+                    imageUrl: 'suit4.png',
+                    title: 'Belt suit blazer',
+                    price: '\$120',
+                  ),
+                  GaleryCard(
+                    imageUrl: 'suit5.png',
+                    title: 'Belt suit blazer',
+                    price: '\$120',
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 23,
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: 28),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  GaleryCard(
+                    imageUrl: 'suit6.png',
+                    title: 'Belt suit blazer',
+                    price: '\$120',
+                  ),
+                  GaleryCard(
+                    imageUrl: 'suit7.png',
+                    title: 'Belt suit blazer',
+                    price: '\$120',
                   ),
                 ],
               ),
