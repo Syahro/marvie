@@ -12,6 +12,7 @@ class StatisticPage extends StatelessWidget {
         isHome: true,
         isChat: false,
         isNotif: false,
+        isCart: false,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
@@ -1027,6 +1028,92 @@ class StatisticPage extends StatelessWidget {
                           'assets/zigzag_chart.png',
                           width: double.infinity,
                           height: 92,
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Text(
+                    'Statistics',
+                    style: boldTextStyle.copyWith(
+                      fontSize: 42,
+                      color: whiteColor,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 19,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    height: 256,
+                    padding: EdgeInsets.only(
+                      top: 24,
+                      left: 23,
+                    ),
+                    decoration: BoxDecoration(
+                      color: semiDarkColor,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Stack(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Statistics',
+                              style: boldTextStyle.copyWith(
+                                fontSize: 18,
+                                color: whiteColor,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 14,
+                            ),
+                            Image.asset(
+                              'assets/indikator.png',
+                              width: double.infinity,
+                              height: 166,
+                            ),
+                          ],
+                        ),
+                        Positioned(
+                          bottom: 62,
+                          right: 15,
+                          child: Image.asset(
+                            'assets/candle.png',
+                            width: 234,
+                            height: 115,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    height: 333,
+                    width: double.infinity,
+                    padding: EdgeInsets.fromLTRB(18, 24, 27, 32),
+                    decoration: BoxDecoration(
+                      color: semiDarkColor,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Statistics',
+                          style: boldTextStyle.copyWith(
+                            fontSize: 18,
+                            color: whiteColor,
+                          ),
+                        ),
+                        Spacer(),
+                        Image.asset(
+                          'assets/piramid.png',
+                          width: double.infinity,
+                          height: 248,
                         ),
                       ],
                     ),
