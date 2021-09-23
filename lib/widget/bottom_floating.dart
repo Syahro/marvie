@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marvie/pages/cart_page.dart';
 import 'package:marvie/pages/chat_page.dart';
 import 'package:marvie/pages/home_page.dart';
 import 'package:marvie/theme.dart';
@@ -8,12 +9,14 @@ class BottomFloating extends StatelessWidget {
   final bool isHome;
   final bool isChat;
   final bool isNotif;
+  final bool isCart;
 
   BottomFloating({
     this.isFav,
     this.isHome,
     this.isChat,
     this.isNotif,
+    this.isCart,
   });
   @override
   Widget build(BuildContext context) {
@@ -45,6 +48,7 @@ class BottomFloating extends StatelessWidget {
                       isHome: true,
                       isChat: false,
                       isNotif: false,
+                      isCart: false,
                     );
                   },
                 ),
@@ -66,6 +70,7 @@ class BottomFloating extends StatelessWidget {
                       isHome: false,
                       isChat: true,
                       isNotif: false,
+                      isCart: false,
                     );
                   },
                 ),
@@ -79,6 +84,28 @@ class BottomFloating extends StatelessWidget {
           Icon(
             Icons.notifications,
             color: isNotif ? greenColor : greyColor,
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return CartPage(
+                      isFav: false,
+                      isHome: false,
+                      isChat: false,
+                      isNotif: false,
+                      isCart: true,
+                    );
+                  },
+                ),
+              );
+            },
+            child: Icon(
+              Icons.shopping_cart,
+              color: isCart ? greenColor : greyColor,
+            ),
           ),
         ],
       ),

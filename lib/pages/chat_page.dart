@@ -8,12 +8,14 @@ class ChatPage extends StatelessWidget {
   final bool isHome;
   final bool isChat;
   final bool isNotif;
+  final bool isCart;
 
   ChatPage({
     this.isFav,
     this.isHome,
     this.isChat,
     this.isNotif,
+    this.isCart,
   });
   @override
   Widget build(BuildContext context) {
@@ -23,6 +25,7 @@ class ChatPage extends StatelessWidget {
         isHome: isHome,
         isChat: isChat,
         isNotif: isNotif,
+        isCart: isCart,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       backgroundColor: linearBackgroundOne,

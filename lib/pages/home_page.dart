@@ -12,12 +12,15 @@ class HomePage extends StatelessWidget {
   final bool isHome;
   final bool isChat;
   final bool isNotif;
+  final bool isCart;
+
 
   HomePage({
     this.isFav,
     this.isHome,
     this.isChat,
     this.isNotif,
+    this.isCart,
   });
   @override
   Widget build(BuildContext context) {
@@ -28,6 +31,7 @@ class HomePage extends StatelessWidget {
         isHome: isHome,
         isChat: isChat,
         isNotif: isNotif,
+        isCart: isCart,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(

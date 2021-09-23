@@ -110,6 +110,7 @@ class SignupFacePage extends StatelessWidget {
                                 isHome: true,
                                 isChat: false,
                                 isNotif: false,
+                                isCart: false,
                               );
                             },
                           ),
