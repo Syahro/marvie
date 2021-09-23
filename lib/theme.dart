@@ -16,6 +16,7 @@ Color semiDarkColor = Color(0XFF30444E);
 Color lightDarkColor = Color(0XFF30444E);
 Color whiteColor = Color(0XFFFFFFFF);
 Color greyColor = Color(0XFF96A7AF);
+Color darkGreyColor = Color(0XFF979797);
 Color cardColor = Color(0XFFEDF1FA);
 
 TextStyle blackTextStyle = TextStyle(

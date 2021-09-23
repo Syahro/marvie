@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:marvie/pages/cart_page.dart';
 import 'package:marvie/pages/chat_page.dart';
+import 'package:marvie/pages/galery_colorful_page.dart';
 import 'package:marvie/pages/home_page.dart';
 import 'package:marvie/theme.dart';
+import 'package:marvie/widget/galery_card.dart';
 
 class BottomFloating extends StatelessWidget {
   final bool isFav;
@@ -33,9 +35,27 @@ class BottomFloating extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(
-            Icons.favorite,
-            color: isFav ? greenColor : greyColor,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return GaleryColorfulPage(
+                      isFav: true,
+                      isHome: false,
+                      isChat: false,
+                      isNotif: false,
+                      isCart: false,
+                    );
+                  },
+                ),
+              );
+            },
+            child: Icon(
+              Icons.favorite,
+              color: isFav ? greenColor : greyColor,
+            ),
           ),
           GestureDetector(
             onTap: () {
