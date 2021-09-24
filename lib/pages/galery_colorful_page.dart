@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:marvie/theme.dart';
 import 'package:marvie/widget/bottom_floating.dart';
+import 'package:marvie/widget/courses_card.dart';
+import 'package:marvie/widget/courses_category.dart';
 
 class GaleryColorfulPage extends StatelessWidget {
   final bool isFav;
@@ -304,10 +306,57 @@ class GaleryColorfulPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                      )
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
                     ],
                   )
                 ],
+              ),
+              Text(
+                'Courses',
+                style: boldTextStyle.copyWith(
+                  fontSize: 42,
+                  color: whiteColor,
+                ),
+              ),
+              SizedBox(
+                height: 19,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CoursesCategory(
+                    imageUrl: 'intro1.png',
+                    colorCard: greenColor,
+                  ),
+                  CoursesCategory(
+                    imageUrl: 'intro2.png',
+                    colorCard: redColor,
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 19,
+              ),
+              CoursesCard(
+                imageUrl: 'play_green.png',
+                cardColor: greenColor,
+              ),
+              SizedBox(
+                height: 19,
+              ),
+              CoursesCard(
+                imageUrl: 'play_yellow.png',
+                cardColor: yellowColor,
+              ),
+              SizedBox(
+                height: 19,
+              ),
+              CoursesCard(
+                imageUrl: 'play_red.png',
+                cardColor: redColor,
               ),
               SizedBox(
                 height: 130,
